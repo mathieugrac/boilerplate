@@ -1,0 +1,80 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// @include font-face( "Font Name", "../fonts/font-file-name", normal);
+// @import url(https://fonts.googleapis.com/css?family=Font+Name:variant,variant);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Source+Serif+Pro:400,700);
+
+$ff-sans:     "Roboto", Arial, sans;
+$ff-serif:    "Source Serif Pro", Georgia, serif;
+$ff-code:     Menlo, Monaco, mono;
+
+$ff-base:     $ff-sans;
+
+
+/* Font-sizing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$font-x-small:      rem(11);
+$font-small:        rem(13);
+$font-base:         rem(15);
+$font-medium:       rem(24);
+$font-large:        rem(36);
+$font-x-large:      rem(40);
+
+$font-size-base:    $font-base; 
+$line-height-base:  1.6;
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$space-unit:        5;
+
+$space-small:       rem($space-unit * 2);  // 10px;
+$space-base:        rem($space-unit * 4);  // 20px;
+$space-medium:      rem($space-unit * 6);  // 30px;
+$space-large:       rem($space-unit * 10); // 50px;
+$space-x-large:     rem($space-unit * 16); // 80px;
+
+
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$gray-dark:         #181818;
+$gray-medium:       #585858;
+
+$color-base:        $gray-medium;
+$bg-base:           #fff;
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$grid-columns:      12;
+$grid-gutter:       40px;
+$grid-max:          1200px;
+
+
+$grid: (
+  xs: (
+    breakpoint:     rem(0),
+    container:      100%
+    ),
+  sm: (
+    breakpoint:     rem(480),
+    container:      90%
+    ),
+  md: (
+    breakpoint:     rem(768),
+    container:      90%
+    ),
+  lg: (
+    breakpoint:     rem(990),
+    container:      90%
+    )
+);

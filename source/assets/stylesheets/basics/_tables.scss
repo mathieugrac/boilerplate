@@ -1,0 +1,21 @@
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+table {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: $space-base;
+}
+
+th,
+td {
+  padding: 10px 20px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; 
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}

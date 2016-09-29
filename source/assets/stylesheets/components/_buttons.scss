@@ -1,0 +1,66 @@
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$btn-font-family: $ff-base;
+$btn-font-weight: 700;
+$btn-border-radius: 4px;
+
+.btn, button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+
+  cursor: pointer;
+  box-sizing: border-box; 
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid transparent;
+  user-select: none;
+  
+  //Base-style
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  border-radius: $btn-border-radius;
+  color: inherit;
+  
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    text-decoration: none;
+    outline: 0;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: none;
+    opacity: .65;
+    box-shadow: 0;
+  }
+
+}
+
+.btn-primary {
+  @extend .btn;
+  @include btn-size(14px, rem(40), 20px);
+  @include btn-style(white, red, red);
+}
+
+.btn-secondary {
+  @extend .btn;
+  @include btn-size(14px, rem(40), 20px);
+  @include btn-style(red, transparent, red);
+}
+
+.btn-large {
+  @include btn-size(16px, rem(60), 30px);
+}
+
+.btn-small {
+  @include btn-size($font-x-small, $space-medium, $space-base);
+}
+

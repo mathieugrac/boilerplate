@@ -4,10 +4,9 @@ source 'https://rubygems.org'
 
 gem "middleman", "~>3.4.1"
 gem "middleman-deploy"
-
-# Live-reloading plugin
 gem "middleman-livereload", "~> 3.3.0"
 
 # Assets
 gem 'jquery-middleman'
-gem 'bootstrap-sass'
+gem 'bourbon'
+gem 'font-awesome-sass', '4.5.0'

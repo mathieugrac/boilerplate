@@ -1,0 +1,18 @@
+/* Body
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+
+  position: relative;
+  height: 100%;
+  overflow: auto;
+
+  font-family: $ff-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-base;
+  background-color: $bg-base;
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,102 @@
+// Variables
+$tooltip-z-index: 5;
+$tooltip-max-width: 200px;
+$tooltip-opacity: .9;
+$tooltip-color: #fff;
+$tooltip-bg: #000;
+$tooltip-arrow-color: #000;
+$tooltip-arrow-width: 5px;
+
+$tooltip-font-size: 12px;
+$tooltip-margin: 10px;
+$tooltip-radius: 3px;
+$tooltip-padding-y: 5px;
+$tooltip-padding-x: 5px;
+
+// Base class
+.tooltip {
+  position: absolute;
+  z-index: $tooltip-z-index;
+  display: block;
+  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  @include reset-text();
+  font-size: $tooltip-font-size;
+  // Allow breaking very long words so they don't overflow the tooltip's bounds
+  word-wrap: break-word;
+  opacity: 0;
+
+  &.in { opacity: $tooltip-opacity; }
+
+  &.tooltip-top,
+  &.bottom {
+    padding: $tooltip-arrow-width 0;
+    margin-top: -$tooltip-margin;
+
+    .tooltip-arrow {
+      bottom: 0;
+      left: 50%;
+      margin-left: -$tooltip-arrow-width;
+      border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
+      border-top-color: $tooltip-arrow-color;
+    }
+  }
+  &.tooltip-right,
+  &.left {
+    padding: 0 $tooltip-arrow-width;
+    margin-left: $tooltip-margin;
+
+    .tooltip-arrow {
+      top: 50%;
+      left: 0;
+      margin-top: -$tooltip-arrow-width;
+      border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
+      border-right-color: $tooltip-arrow-color;
+    }
+  }
+  &.tooltip-bottom,
+  &.top {
+    padding: $tooltip-arrow-width 0;
+    margin-top: $tooltip-margin;
+
+    .tooltip-arrow {
+      top: 0;
+      left: 50%;
+      margin-left: -$tooltip-arrow-width;
+      border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
+      border-bottom-color: $tooltip-arrow-color;
+    }
+  }
+  &.tooltip-left,
+  &.right {
+    padding: 0 $tooltip-arrow-width;
+    margin-left: -$tooltip-margin;
+
+    .tooltip-arrow {
+      top: 50%;
+      right: 0;
+      margin-top: -$tooltip-arrow-width;
+      border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
+      border-left-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  max-width: $tooltip-max-width;
+  padding: $tooltip-padding-y $tooltip-padding-x;
+  color: $tooltip-color;
+  text-align: center;
+  background-color: $tooltip-bg;
+  border-radius: $tooltip-radius;
+}
+
+// Arrows
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
