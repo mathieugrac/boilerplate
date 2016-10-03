@@ -47,13 +47,13 @@ input[type="button"] {
 .btn-primary {
   @extend .btn;
   @include btn-size(14px, rem(40), 20px);
-  @include btn-style(white, red, red);
+  @include btn-style(white, $color-accent, $color-accent);
 }
 
 .btn-secondary {
   @extend .btn;
   @include btn-size(14px, rem(40), 20px);
-  @include btn-style(red, transparent, red);
+  @include btn-style($color-accent, transparent, $color-accent);
 }
 
 .btn-large {

@@ -52,6 +52,7 @@ activate :directory_indexes
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
+set :fonts_dir,  "assets/fonts"
 
 set :partials_dir, 'source/partials'
 

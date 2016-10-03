@@ -1,0 +1,42 @@
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $space-base;
+  margin-bottom: $space-base;
+}
+
+p, 
+a,
+small,
+blockquote,
+pre,
+figure,
+ul,
+ol,
+table {
+  margin-top: 0;
+  margin-bottom: $space-base;
+}
+
+hr {
+  margin-top: $space-base;
+  margin-bottom: $space-base;
+}
+
+button,
+.button {
+  margin-bottom: $space-base;
+}
+
+img {
+  margin-top: 0;
+  margin-bottom: $space-base;
+}
+
+form,
+fieldset,
+textarea,
+.form-group {
+  margin-bottom: $space-base;
+}
